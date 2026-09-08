@@ -22,3 +22,33 @@
 
 // Découpe d'abord le problème en petites étapes.
 // TODO: écris ta solution ici.
+
+let montant = 100000;
+let mois = 24;
+let revenuMensuel = 10000;
+let mensualite = montant / mois;
+let choix = true;
+if(mensualite <= revenuMensuel * 0.3)
+{
+    console.log("Prêt accordé. Mensualité :"+ mensualite +" MAD");
+}
+else if (revenuMensuel >= 10000)
+{
+   let MoisAproposer = (montant / (revenuMensuel * 0.3));
+    console.log(MoisAproposer);
+    if(choix)
+    {
+        mensualite = revenuMensuel * 0.3;
+        mois = MoisAproposer
+        console.log("Prêt accordé. Mensualité :"+ mensualite +" MAD")
+
+    }
+    else
+    {
+        console.log("Prêt Refuse.");
+    }
+}
+else
+{
+    console.log("Prêt Refuse.");
+}
