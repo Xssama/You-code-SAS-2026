@@ -15,8 +15,9 @@
 // 1. Identifie les données nécessaires.
 // 2. Écris ta solution sous cette ligne.
 // TODO: écris ta solution ici.
-let nb = 370;
-let remain = nb;
+for (let nb = 100; nb <= 999; nb++) {
+    
+    let remain = nb;
 
 let chiffre1 = Math.trunc(remain%10);
 remain /= 10;
@@ -30,7 +31,4 @@ if(nb == sum)
     console.log(nb, " est Un nombre d'Armstrong à 3 chiffres");
     
 }
-else
-    console.log(nb, " n'est  pas un nombre d'Armstrong à 3 chiffres");
-
-
+}
