@@ -23,7 +23,9 @@
 // Découpe d'abord le problème en petites étapes.
 // TODO: écris ta solution ici.
 
-let Total = 0;
+function Game()
+{
+    let Total = 0;
 
 function Rand(Max, Min)
 {
@@ -55,13 +57,20 @@ function combatGagne()
     ajouterOr(X);  
 
 }
-console.log(Total);
-ajouterOr(10);
-console.log(Total);
-depenserOr(3);
-console.log(Total);
+return {
+    combatGagne,
+    ajouterOr,
+    depenserOr
+}
+}
 
-combatGagne();
-combatGagne();
-combatGagne();
+const game = Game();
 
+game.ajouterOr(10)
+game.depenserOr(5)
+game.combatGagne();
+game.combatGagne()
+game.combatGagne()
+
+
+game.depenserOr(100);
