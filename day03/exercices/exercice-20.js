@@ -15,3 +15,41 @@
 // 1. Identifie les données nécessaires.
 // 2. Écris ta solution sous cette ligne.
 // TODO: écris ta solution ici.
+
+const cashe = {}
+
+function fac(num)
+{
+    if (num <= 1) {
+        return 1;
+    }
+    else
+        return num * fac(num-1)
+}
+
+function CalculFacX(Num)
+{
+    
+        
+        if (cashe[Num] !== undefined) {
+           return cashe[Num];
+        }
+        else
+        {
+            let resultat = fac(Num);
+            cashe[Num] = resultat;
+            return resultat;
+        }
+}
+
+
+
+console.log(CalculFacX(5));
+console.log(CalculFacX(5));
+console.log(CalculFacX(2));
+console.log(CalculFacX(2));
+console.log(CalculFacX(5));
+
+
+
+

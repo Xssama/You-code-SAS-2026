@@ -17,15 +17,14 @@
 // TODO: écris ta solution ici.
 function extrairePrixEtConvertir(chaineBrute)
 {
-    let Number = 0;
+    let Number = "";
     for (let index = 0; index < chaineBrute.length; index++) {
-        if ( typeof chaineBrute[index] !== Number && chaineBrute[index] !== '.' ) {
-            chaineBrute.splice(index, 1)
+        if (chaineBrute[index] >= '0' && chaineBrute[index] <= '9' || chaineBrute[index] === ".") {
+            Number += chaineBrute[index];
         }
     }
-    if (chaineBrute) {
-        
-    }
+    
+    return parseFloat(Number);
 }
 
 let str =  "   Prix: 15.99 $  ";

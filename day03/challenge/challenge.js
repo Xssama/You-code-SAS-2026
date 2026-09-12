@@ -22,3 +22,46 @@
 
 // Découpe d'abord le problème en petites étapes.
 // TODO: écris ta solution ici.
+
+let Total = 0;
+
+function Rand(Max, Min)
+{
+
+    return Math.floor((Math.random() * (Max - Min - 1)) + Min);
+}
+
+function ajouterOr(montant)
+{
+    Total += montant;
+    console.log("Vous avez ramassé", montant, "or. Total: ", Total, "or.");
+    
+}
+function depenserOr(montant)
+{
+    if (montant > Total) {
+        console.log("Fonds insuffisants");
+    }
+    else
+    {
+        Total -= montant;
+        console.log("L'achat bien passe, montant: ", montant, "or, Total:", Total, "or.");
+        
+    }
+}
+function combatGagne()
+{
+    let X = Rand(10, 50)
+    ajouterOr(X);  
+
+}
+console.log(Total);
+ajouterOr(10);
+console.log(Total);
+depenserOr(3);
+console.log(Total);
+
+combatGagne();
+combatGagne();
+combatGagne();
+
